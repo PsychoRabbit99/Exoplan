@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentline = lines[i].split(',');
             if (currentline.length === headers.length) { // Ensure the line has the correct number of columns
                 for (let j = 0; j < headers.length; j++) {
-                    obj[headers[j]] = currentline[j];
+                    obj[headers[j].trim()] = currentline[j].trim();
                 }
                 result.push(obj);
             }
@@ -33,17 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         filteredData.forEach(exoplanet => {
             const option = document.createElement('option');
-            option.value = exoplanet['kepler_name'];
+            option.value = exoplanet['kepler_name']; // Use the kepler_name as the value
             option.textContent = exoplanet['kepler_name'];
             selectElement.appendChild(option);
         });
 
-        // Add event listener for redirection and search
+        // Add event listener for redirection
         selectElement.addEventListener('change', (event) => {
-            const selectedName = event.target.value;
+            let selectedName = event.target.value;
             if (selectedName) {
-                const searchUrl = `https://eyes.nasa.gov/apps/exo/#/search?query=${encodeURIComponent(selectedName)}`;
-                window.location.href = searchUrl;
+                // Replace spaces with underscores
+                selectedName = selectedName.replace(/ /g, '_');
+                window.location.href = `https://eyes.nasa.gov/apps/exo/#/planet/${selectedName}`;
             }
         });
     }
