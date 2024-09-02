@@ -1,16 +1,63 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    
+    margin: 0;
+    padding: 0;
+    background-image: url(./image/exo.jpg); /* Set the background image */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-attachment: fixed; /* Makes the background fixed during scrolling */
+    height: 100vh; /* Ensure it covers full viewport height */
+    width: 100vw;
+    overflow: hidden;
 }
 
-h1 {
-    color: #333;
+.exo1 h1
+{
+    
+ 
+    color: #E6BE8A; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    
+    padding-top: 40px;
+    text-align: center;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 400;
+}
+.exo1 h2
+{
+  
+        color: #E6BE8A; /* Gold-like color */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Dark shadow for depth */
+        font-size: 2rem; /* Adjust size as needed */
+        font-weight: 1000; /* Adjust weight as needed for a strong presence */
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
 }
 
-label {
-    margin-right: 10px;
+.exo2 
+{
+    text-align: center;
+    margin-top: 25px;
+    color: #D4A373;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 
-select {
-    padding: 5px;
+.exo2 select {
+    border-radius: 20px;
+    margin-left: 25px;
+    background-color: transparent;
+    height: 35px;
+    color: #D4A373;
+    text-transform: capitalize;
+    border-color:#D4A373;
+
+
+
 }
