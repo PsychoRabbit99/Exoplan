@@ -1,0 +1,133 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding-top: 60px; /* Offset to avoid content hiding behind navbar */
+}
+
+.container {
+    margin: 50px auto;
+    width: 90%; /* Adjusted for smaller screens */
+    max-width: 1200px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table, th, td {
+    border: 1px solid #fff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+thead {
+    background-color: #444;
+}
+
+th {
+    font-size: 1.1rem;
+}
+
+td {
+    font-size: 1rem;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #222;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #333;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: #E6BE8A;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 12px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    th, td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    th, td {
+        font-size: 0.8rem;
+    }
+
+    .navbar a {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .container {
+        width: 100%;
+    }
+}

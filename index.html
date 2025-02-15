@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kepler Exoplanet Selector</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
-
 <body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="constellation.html">Constellations</a></li>
+        </ul>
+    </nav>
+    <br><br>
     <section class="exoplanet">
         <div class="exo1">
             <h1>Infinite Worlds Endless Discoveries: Welcome to the Realm of Exoplanets</h1>
@@ -20,10 +26,21 @@
                     <option value="">Choose an exoplanet</option>
                 </select>
             </div>
-            <script src="script2.js"></script>
         </div>
     </section>
-    
-</body>
 
+    <script src="script2.js"></script>
+    <script>
+        const image = [
+            './image/exo.jpg',
+            './image/exo1.jpg',
+            './image/exo2.jpg',
+            './image/exo3.jpg',
+            './image/exo4.jpg'
+        ];
+
+        const randomImage = image[Math.floor(Math.random() * image.length)];
+        document.body.style.backgroundImage = `url(${randomImage})`;
+    </script>
+</body>
 </html>

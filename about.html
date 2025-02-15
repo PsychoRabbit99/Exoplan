@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="constellation.html">Constellations</a></li>
+        </ul>
+    </nav>
+    <div class="about-us-content">
+
+        <div class="about-image">
+            <img src="./image/mahi.jpg" alt="" class="src">
+        </div>
+        <div class="about-info">
+            <h3><span style="color:#E6BE8A ">MAHI-B-RAHAMAN</span></h3>
+            <h6>&bull;Team lead</h5>
+
+                <h6>&bull;Back-end Developer</h5>
+                    <h6>&bull;API Integration Developer</h5>
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="about-us-content">
+
+        <div class="about-image">
+            <img src="./image/Rakin.jpg" alt="" class="src">
+        </div>
+        <div class="about-info">
+            <h3><span style="color:#E6BE8A ">M.RAKINUL ALAM</span></h3>
+            <h6>&bull;UI/UX DESIGNER</h5>
+                <h6>&bull;Front-end Developer</h5>
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="script2.js"></script>
+    <script>
+        const image = [
+            './image/exo.jpg',
+            './image/exo1.jpg',
+            './image/exo2.jpg',
+            './image/exo3.jpg',
+            './image/exo4.jpg'
+        ];
+
+        const randomImage = image[Math.floor(Math.random() * image.length)];
+        document.body.style.backgroundImage = `url(${randomImage})`;
+    </script>
+</body>
+
+</html>

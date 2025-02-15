@@ -1,63 +1,192 @@
 body {
     font-family: Arial, sans-serif;
-    
     margin: 0;
     padding: 0;
-    background-image: url(./image/exo.jpg); /* Set the background image */
-    background-size: cover; /* Cover the entire screen */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-    background-attachment: fixed; /* Makes the background fixed during scrolling */
-    height: 100vh; /* Ensure it covers full viewport height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
     width: 100vw;
     overflow: hidden;
 }
 
-.exo1 h1
-{
-    
- 
-    color: #E6BE8A; 
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #E6BE8A;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+.exo1 h1 {
+    color: #E6BE8A;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    
-    padding-top: 40px;
+    padding-top: 100px;
     text-align: center;
-
     font-family: 'Courier New', Courier, monospace;
-    font-size: 400;
-}
-.exo1 h2
-{
-  
-        color: #E6BE8A; /* Gold-like color */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Dark shadow for depth */
-        font-size: 2rem; /* Adjust size as needed */
-        font-weight: 1000; /* Adjust weight as needed for a strong presence */
-        font-family: 'Courier New', Courier, monospace;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-
+    font-size: 4rem;
 }
 
-.exo2 
-{
+.exo1 h2 {
+    color: #E6BE8A;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-size: 2rem;
+    font-weight: 1000;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.exo2 {
     text-align: center;
     margin-top: 25px;
     color: #D4A373;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
 }
 
 .exo2 select {
     border-radius: 20px;
     margin-left: 25px;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.1);
     height: 35px;
     color: #D4A373;
     text-transform: capitalize;
-    border-color:#D4A373;
+    border: 1px solid #D4A373;
+    padding: 5px;
+}
 
+.exo2 select option:first-child {
+    color: gray;
+}
 
+/* About Us Section */
+.about-us-content {
+    color: #E6BE8A;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-size: 2rem;
+    font-weight: 1000;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 100px 300px 0 300px;
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+}
 
+.about-info h6 {
+    margin: 0;
+}
+
+.about-info {
+    text-align: left;
+    margin-left: 40px;
+}
+
+.about-image {
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.about-image img {
+    width: 200px;
+    height: 205px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .about-us-content {
+        margin: 50px 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .exo1 h1 {
+        font-size: 2.5rem;
+    }
+
+    .exo1 h2 {
+        font-size: 1.5rem;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .about-us-content {
+        flex-direction: column;
+        margin: 20px;
+        font-size: 1.5rem;
+    }
+
+    .about-info {
+        margin-left: 0;
+    }
+
+    .about-image {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 150px;
+        height: 155px;
+    }
+}
+
+@media (max-width: 480px) {
+    .exo1 h1 {
+        font-size: 1.8rem;
+    }
+
+    .exo1 h2 {
+        font-size: 1.2rem;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+
+    .about-us-content {
+        font-size: 1.2rem;
+        gap: 50px;
+    }
+
+    .about-image img {
+        width: 120px;
+        height: 125px;
+    }
 }
